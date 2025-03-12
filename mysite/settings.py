@@ -150,5 +150,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-CSRT_TRUSTED_ORIGINS = ['http://*','https://web-production-0b1b.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['http://*','https://web-production-0b1b.up.railway.app']
+
+
 

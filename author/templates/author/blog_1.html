@@ -6,6 +6,19 @@
     <title>Blog: ¿Cómo hacer la sinopsis de tu historia?</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'author/blog.css' %}">
+
+    {% if not debug %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NLLG4DYDJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2NLLG4DYDJ');
+    </script>
+    {% endif %}
+
 </head>
 <body>
     <header>

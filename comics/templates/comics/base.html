@@ -36,6 +36,20 @@
     </style>
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    {% if not debug %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NLLG4DYDJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2NLLG4DYDJ');
+    </script>
+    {% endif %}
+
+
 </head>
 <body>
     <!-- MENÚ GLOBAL -->

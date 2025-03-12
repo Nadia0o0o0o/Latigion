@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramienta de Escritura de Guiones</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'author/styles_writer.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Herramienta de Escritura de Guiones</h1>
+        <nav>
+            <a href="{% url 'comics_home' %}">📚 Comics</a>
+            <a href="{% url 'author_home' %}">✍️ Autores</a>
+            <a href="{% url 'social_home' %}">💬 Red Social</a>
+        </nav>
+    </header>
+    <main>
+
+        <a href="{% url 'author_home' %}" class="btn">Salir<a></a>
+
+        <section class="script-editor">
+            <textarea id="script-input" placeholder="Escribe tu guion aquí..." rows="10" cols="50"></textarea>
+        </section>
+        <section class="script-preview">
+            <h2>Vista Previa del Guion</h2>
+            <div id="script-output"></div>
+        </section>
+
+        <button id="save-button">Guardar Guion</button>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+    </main>
+    <footer>
+        <p>© 2025 Telecraft. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="{% static 'js/script_writer.js' %}"></script>  
+</body>
+</html> 

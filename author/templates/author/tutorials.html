@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'author/tutorials.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>Sección de Tutoriales</h1>
+        <nav>
+            <a href="{% url 'comics_home' %}">📚 Lecturas</a>
+            <a href="{% url 'author_home' %}">✍️ Autores</a>
+            <a href="{% url 'social_home' %}">💬 Red Social</a>
+        </nav>
+    </header>
+    <main>
+
+        <a href="{% url 'author_home' %}" class="btn">Salir<a></a>
+
+        <section class="video-tutorials">
+            <h2>Videos Tutoriales (Aun no tenemos ningun video por el momento solo te mostramos un anuncio nuestro)</h2>
+            <div class="video">
+                <iframe width="560" height="315" src="https://youtube.com/embed/GCHr4nGW_Oc?si=PsZ_2WG8kLP-MlgZ" frameborder="0" allowfullscreen></iframe>
+                <p>Sumérgete en el fascinante mundo de la construcción de lore y aprende a dar vida a tu propia historia. En este video, te guiamos paso a paso para desarrollar un lore profundo y coherente que enriquezca tu narrativa. Descubre cómo crear un trasfondo histórico y cultural para tus personajes, construir mapas detallados, y establecer reglas y mitologías que hagan de tu mundo algo único y memorable. ¡Haz que tus lectores se sientan parte de un universo completamente nuevo!</p>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://youtube.com/embed/GCHr4nGW_Oc?si=PsZ_2WG8kLP-MlgZ" frameborder="0" allowfullscreen></iframe>
+                <p>¡El arte de crear personajes inolvidables empieza aquí! En este tutorial, te enseñamos las claves para desarrollar protagonistas complejos y realistas que capturen la imaginación de tus lectores. Desde la creación de rasgos físicos y psicológicos hasta la construcción de historias de vida y motivaciones, aprenderás técnicas probadas para hacer que tus personajes se sientan vivos y auténticos. ¡Descubre cómo hacer que tus héroes y villanos salten de la página y se conviertan en leyendas!</p>
+            </div>
+
+            <div class="video">
+                    <iframe width="560" height="315" src="https://youtube.com/embed/GCHr4nGW_Oc?si=PsZ_2WG8kLP-MlgZ" frameborder="0" allowfullscreen></iframe>
+                    <p>Los diálogos pueden hacer o deshacer una historia. En este video, exploramos el arte de escribir diálogos que resuenen y emocionen a tus lectores. Aprende a dar voz a tus personajes de manera auténtica, a utilizar el subtexto para añadir profundidad a las conversaciones, y a mantener el ritmo y la fluidez en tus escenas de diálogo. Te mostraremos cómo evitar clichés y hacer que cada palabra cuente. ¡Conviértete en un maestro de los diálogos y lleva tus historias al siguiente nivel!</p>
+              
+            <!-- Añadir más videos aquí -->
+        </section>
+        <section class="blog-tutorials">
+            <h2>Blogs</h2>
+            <article class="blog-post">
+                <h3>Sinopsis</h3>
+                <p>Como hacer la sinopsis de tu historia.</p>
+                <a href="{% url 'blog' %}">Leer más</a>
+            </article>
+            <article class="blog-post">
+                <h3>7 elementos clave antes de inciar tu historia</h3>
+                <p>7 cosas que me gustaria haber sabido antes de hacer mis historias</p>
+                <a href="{% url 'blog' %}">Leer más</a>
+            </article>
+            <!-- Añadir más blogs aquí -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 LATIGION. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

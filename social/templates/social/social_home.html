@@ -1,0 +1,92 @@
+<!-- social_home.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conéctate con otros lectores y creadores en LATIGION. Comparte tus historias, comenta y descubre nuevas obras.">
+    <meta name="keywords" content="red social, comunidad, cómics, manga, LATIGION, autores">
+    <meta property="og:title" content="Red Social - LATIGION">
+    <meta property="og:description" content="Comparte y comenta historias con otros apasionados de la lectura y creación.">
+    <meta property="og:image" content="URL_DE_LA_IMAGEN">
+    <meta property="og:url" content="URL_DE_LA_PAGINA">
+    <meta name="twitter:title" content="Red Social - LATIGION">
+    <meta name="twitter:description" content="Comparte y comenta historias con otros apasionados de la lectura y creación.">
+
+
+
+    <title>Authors Heaven - Social</title>
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'social/styles.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>Comunidad de Telecraft</h1>
+        <p>Conéctate con otros autores y lectores (En este momento solo es una muestra visual de lo que sera esta seccion que aun esta en desarrollo)</p>
+    </header>
+
+    <nav class="menu-global">
+        <a href="{% url 'comics_home' %}">Lectura</a>
+        <a href="{% url 'author_home' %}">Autores</a>
+        <a href="{% url 'social_home' %}">Red Social</a>
+    </nav>
+
+    <nav> 
+        <ul>
+            <li><a href="{% url 'plantilla_no_funciona' %}">Destacados</a></li>
+            <li><a href="{% url 'plantilla_no_funciona' %}">Últimas Publicaciones</a></li>
+            <li><a href="{% url 'plantilla_no_funciona' %}">Subir tu obra</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="social-feed">
+        <h2>Feed de la Comunidad</h2>
+        <!-- Ejemplo de Publicación -->
+        <div class="post">
+            <div class="user-info">
+                <img src="{% static 'imagenes/user1.png' %}" alt="Usuario123" class="user-avatar">
+                <span class="user-name">Usuario123</span>
+            </div>
+            <div class="post-content">
+                <p>¡Que panelazo!</p>
+            </div>
+            <div class="post-actions">
+                <button class="like-button">Me gusta</button>
+                <button class="comment-button">Comentar</button>
+                <button class="share-button">Compartir</button>
+            </div>
+        </div>
+        <!-- Añadir más publicaciones aquí -->
+    </section>
+
+
+    <section id="posts">
+        <h2>Últimos Posts</h2>
+
+        <div class="content">
+            <h1>Tema y Post</h1>
+            <div class="image-gallery">
+                <div class="card">TEMA: 
+                    <p>Super Sayajin</p>
+                </div>
+                <img src="{% static 'imagenes/portada_dragonball - copia (2).jpg' %}" alt="Tema">
+                <div class="card">POST: 
+                    <p>Goku va hacer pedazos a Frizeer</p>
+                </div>
+                <img src="{% static 'imagenes/panelazo_supersayajin.jpg' %}" alt="Post">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="crear">
+        <h2>Comparte tu opinión</h2>
+        <textarea placeholder="Escribe algo..."></textarea>
+        <button>Publicar</button>
+    </section>
+</body>
+</html>

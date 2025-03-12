@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog: ¿Cómo hacer la sinopsis de tu historia?</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'author/blog.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Blog de Escritura Creativa</h1>
+        <nav>
+            <a href="home.html">Inicio</a>
+            <a href="{% url 'comics_home' %}">📚 Lecturas</a>
+            <a href="{% url 'author_home' %}">✍️ Autores</a>
+            <a href="{% url 'social_home' %}">💬 Red Social</a>
+            <a href="{% url 'tutorial' %}">Tutoriales</a>
+
+        </nav>
+    </header>
+    <main>
+        <article class="blog-post">
+            <h2>¿Cómo hacer la sinopsis de tu historia?</h2>
+            <p>La sinopsis es una herramienta esencial para captar la atención de los lectores y darles una idea de qué esperar en tu historia. Aquí te ofrecemos algunos pasos clave para crear una sinopsis efectiva y atractiva:</p>
+            <h3>1. Presenta a los personajes principales</h3>
+            <p>Introduce a los personajes principales y su rol en la historia. Descríbelos brevemente, mencionando sus objetivos y conflictos. Esto ayuda a los lectores a conectar con ellos desde el principio.</p>
+            <h3>2. Establece el escenario</h3>
+            <p>Define el lugar y el tiempo en que ocurre la historia. Un escenario bien descrito puede proporcionar contexto y atraer a los lectores a tu mundo narrativo.</p>
+            <h3>3. Resalta el conflicto</h3>
+            <p>El conflicto es el motor de la historia. Explica cuál es el problema principal que enfrentan los personajes y por qué es importante. Esto crea interés y anticipación.</p>
+            <h3>4. Mantén la brevedad</h3>
+            <p>Una sinopsis debe ser concisa. Evita entrar en demasiados detalles y mantén el enfoque en los aspectos clave de la trama. La brevedad es esencial para mantener la atención del lector.</p>
+            <h3>5. Deja un gancho</h3>
+            <p>Termina la sinopsis con una pregunta o una idea intrigante que motive al lector a querer saber más. Un gancho efectivo puede ser la clave para que decidan leer tu historia.</p>
+            <p>Siguiendo estos pasos, podrás crear una sinopsis que capture la esencia de tu historia y atraiga a tus lectores. ¡Buena suerte y feliz escritura!</p>
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 LATIGION. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

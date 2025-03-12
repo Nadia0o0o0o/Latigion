@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Comics{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: black; color: white; }
+        .navbar { background: #222; padding: 10px; text-align: center; }
+        .navbar a { color: red; text-decoration: none; margin: 15px; font-size: 18px; font-weight: bold; }
+        .navbar a:hover { text-decoration: underline; }
+        .content { padding: 20px; }
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- MENÚ GLOBAL -->
+    <div class="navbar">
+        <a href="{% url 'home' %}">🏠 Inicio</a>
+        <a href="{% url 'comics_home' %}">📚 Comics</a>
+        <a href="{% url 'author_home' %}">✍️ Autores</a>
+        <a href="{% url 'social_home' %}">💬 Red Social</a>
+    </div>
+
+    <!-- CONTENIDO DE LA SECCIÓN DE SOCIAL -->
+
+    <div class="content">
+        {% block content %}
+
+        <main>
+            <section class="social-feed">
+                <h2>Feed de la Comunidad</h2>
+                <!-- Ejemplo de Publicación -->
+                <div class="post">
+                    <div class="user-info">
+                        <img src="user1.png" alt="Usuario123" class="user-avatar">
+                        <span class="user-name">Usuario123</span>
+                    </div>
+                    <p>¡Acabo de leer un capítulo increíble de [Título de la Obra]!</p>
+                    <div class="post-actions">
+                        <button>Me gusta</button>
+                        <button>Comentar</button>
+                        <button>Compartir</button>
+                    </div>
+                </div>
+                <!-- Añadir más publicaciones aquí -->
+            </section>
+            <section class="forums">
+                <h2>Foros Populares</h2>
+                <ul>
+                    <li><a href="#">Foro sobre [Título de la Obra]</a></li>
+                    <li><a href="#">Foro sobre técnicas de dibujo</a></li>
+                    <li><a href="#">Foro de recomendaciones</a></li>
+                    <!-- Añadir más foros aquí -->
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 [Nombre de la App]. Todos los derechos reservados.</p>
+        </footer>
+
+
+
+        {% endblock %}
+    </div>
+
+
+    
+
+</body>
+</html>

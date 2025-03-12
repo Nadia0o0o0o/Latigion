@@ -28,7 +28,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
-#ALLOWED_HOSTS = ['web-production-0b1b.up.railway.app', 'localhost']
+ALLOWED_HOSTS = ['web-production-0b1b.up.railway.app', 'localhost']
 
 # Application definition
 

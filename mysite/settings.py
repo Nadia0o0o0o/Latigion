@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +32,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
-ALLOWED_HOSTS = ['web-production-0b1b.up.railway.app', 'localhost']
+ALLOWED_HOSTS = ['localhost', 'web-production-0b1b.up.railway.app']
 
 # Application definition
 
@@ -86,13 +90,42 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+print(os.getenv('DATABASE_URL'))
+
+
+DATABASES = {
+    'default': dj_database_url.config(default = os.getenv('DATABASE_URL'), engine='django.db.backends.postgresql')
+}
+
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'XASOYbrdxjgfIizNIDOOXzMwqhjglwJB',
+        'HOST': 'postgres-0wed.railway.internal',
+        'PORT': '5432',
+    }
+}
+"""
+
+"""
+DATABASES = {
+    'default': dj_database_url.config(default = os.getenv('DATABASE_URL'), engine='django.db.backends.postgresql')
+}
+"""
+
+
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

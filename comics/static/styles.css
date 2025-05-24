@@ -767,8 +767,11 @@ df-messenger {
 }
 */
 
+
+
+/*
 .chatbot-container {
-    opacity: 1; /* Asegura que el chatbot sea visible */
+    opacity: 1; 
     transform: scale(1);
     animation: fadeIn 0.5s ease-in forwards;
     display: flex;
@@ -808,8 +811,51 @@ df-messenger {
     background-color: #0055a4;
     transform: scale(1.1);
 }
+*/
 
 
+
+/* Contenedor del chatbot, centrado */
+.chatbot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para que ocupe toda la pantalla */
+    background-color: #232323; /* Fondo oscuro para eliminar los espacios en blanco */
+    padding: 20px;
+}
+
+/* Ajustes generales del chatbot */
+df-messenger {
+    width: 50%;
+    max-width: 450px;
+    height: 600px;
+    background: #3a1c71; /* Morado oscuro con degradado */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Personalización del botón flotante */
+df-messenger::part(button) {
+    background-color: #8e44ad; /* Morado vibrante */
+}
+
+/* Personalización de colores internos del chat */
+df-messenger::part(chat) {
+    background-color: #2a1840; /* Morado más oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilos en el hover del botón */
+df-messenger::part(button):hover {
+    background-color: #732d91; /* Morado más oscuro en hover */
+}
+
+/* Estilos en los mensajes del chatbot */
+df-messenger::part(message) {
+    background-color: #646262; /* Mensajes con fondo gris oscuro */
+    color: #DEDEDE; /* Texto claro */
+}
 
 
 

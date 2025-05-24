@@ -821,6 +821,7 @@ df-messenger {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Para que ocupe toda la pantalla */
+    width: 100vw;
     background-color: #232323; /* Fondo oscuro para eliminar los espacios en blanco */
     padding: 20px;
 }

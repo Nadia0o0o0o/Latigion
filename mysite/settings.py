@@ -35,7 +35,8 @@ DEBUG = False
 
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'latigion.onrender.com,127.0.0.1,localhost').split(',')
+
 
 #ALLOWED_HOSTS = ['localhost', 'web-production-0b1b.up.railway.app']
 

@@ -222,6 +222,9 @@ LOGOUT_REDIRECT_URL = '/'
 CSRF_TRUSTED_ORIGINS = ['https://latigion.onrender.com']
 
 
+import sys
+if 'collectstatic' in sys.argv:
+    INPUT = lambda _: "yes"
 
 
 

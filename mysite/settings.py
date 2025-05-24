@@ -30,6 +30,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
+from django.core.exceptions import ImproperlyConfigured
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
+if not SECRET_KEY:
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True 
 

@@ -26,6 +26,8 @@ urlpatterns = [
     path('comic/<int:comic_id>/delete/', views.delete_comic, name='delete_comic'),
     path('comic/<int:comic_id>/chapter/<int:chapter_id>/delete/', views.delete_chapter, name='delete_chapter'),
 
+    path('chatbot/', views.chatbot_view, name='chatbot'),
+
 
 
 

@@ -1,0 +1,28 @@
+{% extends 'comics/base.html' %}
+
+{% block content %}
+     <button class="chatbot-button" onclick="toggleChatbot()">Chatbot</button>
+
+    <div id="chatbot-container" class="chatbot-container" style="display: none;">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+            intent="WELCOME"
+            chat-title="NarradorDigital"
+            agent-id="763080f2-6382-4f3b-94fe-b10cdcc3f502"
+            language-code="es"
+            style="--df-messenger-button-background-color: #0077cc;
+                   --df-messenger-chat-background-color: #ffffff;
+                   --df-messenger-font-color: #333;">
+        </df-messenger>
+    </div>
+
+    <!-- Aquí agregamos el script al final para mejorar rendimiento -->
+    <script>
+        function toggleChatbot() {
+            var chatbot = document.getElementById("chatbot-container");
+            chatbot.style.display = chatbot.style.display === "none" ? "flex" : "none";
+        }
+    </script>
+{% endblock %}
+
+

@@ -16,6 +16,9 @@ from .forms import ComicSearchForm  # Importa el formulario correctamente
 def comics_home(request):
     return render(request, 'comics/comics_home.html')
 
+def chatbot_view(request):
+    return render(request, 'comics/chatbot.html')
+
 
 def home(request):
     comics = Comic.objects.all().order_by('-created_at')

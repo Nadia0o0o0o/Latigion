@@ -58,6 +58,7 @@
         <a href="{% url 'comics_home' %}">📚 Lectura</a>
         <a href="{% url 'author_home' %}">✍️ Autores</a>
         <a href="{% url 'social_home' %}">💬 Red Social</a>
+        <a href="{% url 'chatbot' %}">🤖 Chatbot</a>
         <a href="{% url 'registro' %}">Registrarse</a>
         {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">Cerrar sesión</a>

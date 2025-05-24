@@ -15,6 +15,7 @@ import dj_database_url
 from dotenv import load_dotenv
 import os
 
+
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,14 +26,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7^e=mj$y9&#4hv8dpofkf4&rnbblrto%b=bb8)g$^_***%&ou^'
+#SECRET_KEY = 'django-insecure-7^e=mj$y9&#4hv8dpofkf4&rnbblrto%b=bb8)g$^_***%&ou^'
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
-ALLOWED_HOSTS = ['localhost', 'web-production-0b1b.up.railway.app']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(',')
+
+#ALLOWED_HOSTS = ['localhost', 'web-production-0b1b.up.railway.app']
 
 # Application definition
 
@@ -90,13 +95,33 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-print(os.getenv('DATABASE_URL'))
+#print(os.getenv('DATABASE_URL'))
+
 
 
 DATABASES = {
-    'default': dj_database_url.config(default = os.getenv('DATABASE_URL'), engine='django.db.backends.postgresql')
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600)
 }
 
+
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+"""
+
+
+
+
+"""
+DATABASES = {
+    'default': dj_database_url.config(default = os.getenv('DATABASE_URL'), engine='django.db.backends.postgresql')
+}
+"""
 
 """
 DATABASES = {
@@ -172,6 +197,9 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 LOGIN_REDIRECT_URL = '/'
@@ -183,7 +211,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-CSRF_TRUSTED_ORIGINS = ['http://*','https://web-production-0b1b.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://latigion.onrender.com']
 
 
 
